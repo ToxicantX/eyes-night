@@ -40,6 +40,19 @@ The `src/content/` directory contains "collections" of related Markdown and MDX 
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 🧰 Toolkit（中文）
+
+已添加常用脚本工具集，见：`docs/TOOLKIT.md`
+
+常用命令：
+
+```bash
+npm run new-post -- "文章标题" "标签1,标签2"
+npm run build-check
+npm run link-check
+npm run release-checklist
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

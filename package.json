@@ -6,7 +6,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "new-post": "bash ./scripts/new-post.sh",
+    "build-check": "bash ./scripts/build-check.sh",
+    "link-check": "bash ./scripts/link-check.sh",
+    "release-checklist": "bash ./scripts/release-checklist.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
