@@ -44,5 +44,5 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/ToxicantX/eyes-night' },
   ],
-  footNote: `© ${new Date().getFullYear()} 小一一的博客`,
+  footNote: `© ${new Date().getFullYear()} 小一一的博客 · 记录真实项目，持续迭代成长。`,
 };
