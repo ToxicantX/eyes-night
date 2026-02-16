@@ -14,12 +14,16 @@
 - 用途：按规范创建一篇新文章（含 frontmatter 与章节骨架）
 - 用法：
   ```bash
-  ./scripts/new-post.sh "文章标题" "标签1,标签2"
+  ./scripts/new-post.sh "文章标题" [tag1,tag2] [一句话摘要] [hero序号1-5]
   ```
 - 示例：
   ```bash
-  ./scripts/new-post.sh "我的第一篇 Astro 实战" "Astro,GitHub Pages"
+  ./scripts/new-post.sh "我的第一篇 Astro 实战" "Astro,GitHub Pages" "一周博客搭建复盘" 3
   ```
+- 能力增强：
+  - 自动处理重名文件（会追加 `-2`、`-3`）
+  - 可指定摘要与封面占位图
+  - 自动输出下一步操作建议
 
 ### 2) 构建检查
 - 脚本：`scripts/build-check.sh`
