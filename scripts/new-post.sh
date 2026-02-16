@@ -20,8 +20,8 @@ if ! [[ "$HERO_INDEX" =~ ^[1-5]$ ]]; then
   HERO_INDEX="1"
 fi
 
-DATE_HUMAN="$(date '+%b %d %Y')"
-DATE_PREFIX="$(date '+%Y-%m-%d')"
+DATE_ISO="$(date '+%Y-%m-%d')"
+DATE_PREFIX="$DATE_ISO"
 
 slugify() {
   local s="$1"
@@ -34,7 +34,7 @@ slugify() {
 SLUG="$(slugify "$TITLE")"
 [[ -z "$SLUG" ]] && SLUG="post-${DATE_PREFIX}"
 
-BASE="src/content/blog/${DATE_PREFIX}-${SLUG}"
+BASE="src/data/post/${DATE_PREFIX}-${SLUG}"
 FILE="${BASE}.md"
 N=2
 while [[ -f "$FILE" ]]; do
@@ -51,12 +51,20 @@ done
 [[ -z "$TAGS_FMT" ]] && TAGS_FMT="'未分类', "
 TAGS_FMT="[${TAGS_FMT%, }]"
 
+CATEGORY='技术'
+if [[ "$TAGS_RAW" == *"AI"* || "$TAGS_RAW" == *"ai"* || "$TAGS_RAW" == *"自动化"* ]]; then
+  CATEGORY='AI'
+elif [[ "$TAGS_RAW" == *"游戏"* || "$TAGS_RAW" == *"Game"* ]]; then
+  CATEGORY='游戏'
+fi
+
 cat > "$FILE" <<EOF
 ---
 title: '${TITLE}'
-description: '${DESCRIPTION}'
-pubDate: '${DATE_HUMAN}'
-heroImage: '../../assets/blog-placeholder-${HERO_INDEX}.jpg'
+excerpt: '${DESCRIPTION}'
+publishDate: ${DATE_ISO}
+image: '~/assets/images/default.png'
+category: '${CATEGORY}'
 tags: ${TAGS_FMT}
 ---
 

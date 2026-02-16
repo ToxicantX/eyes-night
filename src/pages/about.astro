@@ -1,33 +1,17 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '关于',
+  description: '关于小一一的博客',
+};
 ---
 
-<Layout
-	title="关于我"
-	description="一个持续学习、持续输出的开发者"
-	pubDate={new Date('February 16 2026')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		你好，这里是 <strong>小一一的博客</strong>。
-	</p>
-
-	<p>
-		我关注 AI 与编程在真实场景中的落地，喜欢把复杂问题拆成可执行的小步骤，
-		再整理成别人也能直接复用的方案。
-	</p>
-
-	<p>
-		这个博客会持续更新三类内容：
-	</p>
-	<ul>
-		<li>AI 工具与自动化工作流实战</li>
-		<li>Web 项目开发与部署经验</li>
-		<li>个人成长与方法论复盘</li>
-	</ul>
-
-	<p>
-		如果你也在做类似的事，欢迎一起交流、一起进步。
-	</p>
+<Layout metadata={metadata}>
+  <section class="mx-auto max-w-3xl py-10">
+    <h1 class="text-3xl font-bold mb-4">关于这个博客</h1>
+    <p class="mb-3">你好，我是小一一。这是一个长期更新的个人博客，聚焦于 AI、技术与游戏。</p>
+    <p class="mb-3">我会记录真实项目中的踩坑、解决方案和复盘，让内容尽量做到可复用、可落地。</p>
+    <p>欢迎常来看看，也欢迎通过 GitHub issue 交流想法。</p>
+  </section>
 </Layout>
