@@ -53,11 +53,32 @@
 
 #header.expanded nav {
   position: fixed;
-  top: 70px;
+  top: 56px;
   left: 0;
   right: 0;
-  bottom: 70px !important;
-  padding: 0 5px;
+  bottom: 0 !important;
+  padding: 0.75rem 0.75rem 1rem;
+  background: var(--aw-color-bg-page);
+  overflow-y: auto;
+}
+
+#header.expanded nav ul {
+  gap: 0.25rem;
+}
+
+#header.expanded nav a,
+#header.expanded nav button {
+  border-radius: 0.6rem;
+}
+
+#header.expanded nav a:hover,
+#header.expanded nav button:hover {
+  background: rgb(0 0 0 / 4%);
+}
+
+.dark #header.expanded nav a:hover,
+.dark #header.expanded nav button:hover {
+  background: rgb(255 255 255 / 8%);
 }
 
 .dropdown:focus .dropdown-menu,
