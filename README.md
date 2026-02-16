@@ -51,6 +51,7 @@ npm run new-post -- "文章标题" "标签1,标签2" "一句话摘要" 2
 npm run build-check
 npm run link-check
 npm run release-checklist
+npm run import-ai-ideas
 ```
 
 ## 🧞 Commands

@@ -49,6 +49,19 @@
   ./scripts/release-checklist.sh
   ```
 
+### 5) 导入 AI 点子日报（7天保留）
+- 脚本：`scripts/import-ai-ideas.sh`
+- 用途：把 `../ai-ideas-bot/reports` 的最新日报导入博客文章，并自动清理超过 7 天的自动导入文章
+- 用法：
+  ```bash
+  ./scripts/import-ai-ideas.sh
+  ```
+- 可选参数：
+  ```bash
+  ./scripts/import-ai-ideas.sh 7
+  ```
+  > `7` 是保留天数，默认就是 7 天
+
 ## NPM 快捷命令
 
 已在 `package.json` 增加：
@@ -57,6 +70,7 @@
 - `npm run build-check`
 - `npm run link-check`
 - `npm run release-checklist`
+- `npm run import-ai-ideas`
 
 ## 维护规则（建议）
 

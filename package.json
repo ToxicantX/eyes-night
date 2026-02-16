@@ -10,7 +10,8 @@
     "new-post": "bash ./scripts/new-post.sh",
     "build-check": "bash ./scripts/build-check.sh",
     "link-check": "bash ./scripts/link-check.sh",
-    "release-checklist": "bash ./scripts/release-checklist.sh"
+    "release-checklist": "bash ./scripts/release-checklist.sh",
+    "import-ai-ideas": "bash ./scripts/import-ai-ideas.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
