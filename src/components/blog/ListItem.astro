@@ -22,7 +22,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article
-  class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${image ? 'md:grid-cols-2' : ''}`}
+  class={`max-w-md mx-auto md:max-w-none grid gap-5 md:gap-8 rounded-2xl border border-gray-200/80 dark:border-slate-700/70 bg-white/90 dark:bg-slate-900/50 p-4 md:p-5 shadow-sm hover:shadow-md transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${image ? 'md:grid-cols-2' : ''}`}
 >
   {
     image &&
@@ -106,7 +106,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       </h2>
     </header>
 
-    {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
+    {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-base md:text-lg leading-relaxed">{post.excerpt}</p>}
     {
       post.tags && Array.isArray(post.tags) ? (
         <footer class="mt-5">
