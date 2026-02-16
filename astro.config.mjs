@@ -7,6 +7,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://toxicantx.github.io',
-	base: '/eyes-night',
+	base: '/eyes-night/',
 	integrations: [mdx(), sitemap()],
 });
