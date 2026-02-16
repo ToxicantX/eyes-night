@@ -3,6 +3,7 @@ title: '你好，世界：小一一的博客正式上线'
 description: '这是博客的第一篇文章，记录建站初衷与接下来会写的内容。'
 pubDate: 'Feb 16 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
+tags: ['博客搭建', 'Astro', 'GitHub Pages']
 ---
 
 大家好，欢迎来到 **小一一的博客**。

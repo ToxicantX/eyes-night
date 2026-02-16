@@ -1,14 +1,43 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Tags from '../components/Tags.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const latestPosts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
 <!doctype html>
 <html lang="zh-CN">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.latest-list {
+				list-style: none;
+				padding: 0;
+				margin: 1rem 0 0;
+				display: grid;
+				gap: 1rem;
+			}
+			.latest-item {
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				padding: 1rem;
+				background: #fff;
+			}
+			.latest-item h3 {
+				margin: 0 0 0.5rem;
+				font-size: 1.2rem;
+			}
+			.latest-item p {
+				margin: 0.4rem 0;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
@@ -20,13 +49,31 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</p>
 			<p>
 				如果你喜欢「能直接上手」的内容，可以从
-				<a href={`${import.meta.env.BASE_URL}blog`}>博客文章</a>
+				<a href={`${import.meta.env.BASE_URL}blog/`}>博客文章</a>
 				开始看起。
 			</p>
 			<ul>
 				<li>🧠 AI 实战：自动化流程、Agent、提效脚本</li>
 				<li>💻 编程实践：项目搭建、部署、问题排查</li>
 				<li>📝 个人笔记：想法、复盘与成长记录</li>
+			</ul>
+
+			<h2 style="margin-top: 2rem;">🆕 最新文章</h2>
+			<ul class="latest-list">
+				{
+					latestPosts.map((post) => (
+						<li class="latest-item">
+							<h3>
+								<a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>{post.data.title}</a>
+							</h3>
+							<p>{post.data.description}</p>
+							<p>
+								<FormattedDate date={post.data.pubDate} />
+							</p>
+							<Tags tags={post.data.tags} />
+						</li>
+					))
+				}
 			</ul>
 		</main>
 		<Footer />

@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	const tagSet = new Set<string>();
+	for (const post of posts) {
+		for (const tag of post.data.tags ?? []) tagSet.add(tag);
+	}
+	return Array.from(tagSet).map((tag) => ({
+		params: { tag: encodeURIComponent(tag) },
+		props: { tag },
+	}));
+}
+
+const { tag } = Astro.props;
+const posts = (await getCollection('blog'))
+	.filter((post) => (post.data.tags ?? []).includes(tag))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`标签：${tag}`} description={`标签 ${tag} 下的文章`} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>标签：#{tag}</h1>
+			<ul>
+				{posts.map((post) => (
+					<li>
+						<a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>{post.data.title}</a>
+						<span> · <FormattedDate date={post.data.pubDate} /></span>
+					</li>
+				))}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,49 @@
+---
+const GISCUS_REPO = 'ToxicantX/eyes-night';
+// 下面两个值需要你在 giscus.app 配置后替换
+const GISCUS_REPO_ID = '';
+const GISCUS_CATEGORY = 'General';
+const GISCUS_CATEGORY_ID = '';
+const isConfigured = Boolean(GISCUS_REPO_ID && GISCUS_CATEGORY_ID);
+---
+
+<section class="comments">
+	<h3>评论区</h3>
+	{
+		isConfigured ? (
+			<script
+				src="https://giscus.app/client.js"
+				data-repo={GISCUS_REPO}
+				data-repo-id={GISCUS_REPO_ID}
+				data-category={GISCUS_CATEGORY}
+				data-category-id={GISCUS_CATEGORY_ID}
+				data-mapping="pathname"
+				data-strict="0"
+				data-reactions-enabled="1"
+				data-emit-metadata="0"
+				data-input-position="top"
+				data-theme="light"
+				data-lang="zh-CN"
+				crossorigin="anonymous"
+				async
+			></script>
+		) : (
+			<p>
+				评论系统已预留。请前往 giscus.app 生成 <code>repoId</code> 与 <code>categoryId</code> 后，
+				填写到 <code>src/components/GiscusComments.astro</code> 即可启用。
+			</p>
+		)
+	}
+</section>
+
+<style>
+	.comments {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.comments h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.8rem;
+	}
+</style>

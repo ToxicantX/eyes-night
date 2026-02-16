@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import GiscusComments from '../../components/GiscusComments.astro';
+import Tags from '../../components/Tags.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -16,5 +18,7 @@ const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>
+	<Tags tags={post.data.tags} />
 	<Content />
+	<GiscusComments />
 </BlogPost>
