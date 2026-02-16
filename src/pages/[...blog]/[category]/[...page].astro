@@ -29,9 +29,20 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-10 sm:py-14 lg:py-16 mx-auto max-w-4xl">
+    <a class="text-sm text-muted hover:text-primary" href="/eyes-night/blog/">← 返回文章列表</a>
     <Headline>{category.title}</Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    {
+      page.data?.length ? (
+        <>
+          <BlogList posts={page.data} />
+          <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+        </>
+      ) : (
+        <div class="mt-6 rounded-xl border border-dashed border-gray-300 dark:border-slate-700 p-6 text-muted">
+          当前分类暂无文章，先去首页看看最新内容吧。
+        </div>
+      )
+    }
   </section>
 </Layout>

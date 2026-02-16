@@ -1,0 +1,35 @@
+---
+const GISCUS_REPO = 'ToxicantX/eyes-night';
+const GISCUS_REPO_ID = 'R_kgDORRNy9A';
+const GISCUS_CATEGORY = 'Ideas';
+const GISCUS_CATEGORY_ID = 'DIC_kwDORRNy9M4C2hyC';
+const isConfigured = Boolean(GISCUS_REPO_ID && GISCUS_CATEGORY_ID);
+---
+
+<section class="max-w-3xl mx-auto mt-12 px-4 sm:px-6">
+  <h3 class="text-xl font-semibold mb-4">评论</h3>
+  {
+    isConfigured ? (
+      <div class="rounded-xl border border-gray-200 dark:border-slate-700 p-3 bg-white/80 dark:bg-slate-900/40">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo={GISCUS_REPO}
+          data-repo-id={GISCUS_REPO_ID}
+          data-category={GISCUS_CATEGORY}
+          data-category-id={GISCUS_CATEGORY_ID}
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="zh-CN"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </div>
+    ) : (
+      <p class="text-muted">评论系统未配置。</p>
+    )
+  }
+</section>
