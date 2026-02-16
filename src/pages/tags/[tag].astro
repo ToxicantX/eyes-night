@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 		for (const tag of post.data.tags ?? []) tagSet.add(tag);
 	}
 	return Array.from(tagSet).map((tag) => ({
-		params: { tag: encodeURIComponent(tag) },
+		params: { tag },
 		props: { tag },
 	}));
 }
