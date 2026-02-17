@@ -2,7 +2,7 @@
 title: 'Third post'
 excerpt: 'Lorem ipsum dolor sit amet'
 publishDate: 2022-07-22
-image: '~/assets/images/default.png'
+image: '~/assets/images/posts/cover-hello-blog.jpg'
 tags: ['开发']
 category: '技术'
 ---
