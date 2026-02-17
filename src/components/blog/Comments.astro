@@ -12,6 +12,7 @@ const isConfigured = Boolean(GISCUS_REPO_ID && GISCUS_CATEGORY_ID);
     isConfigured ? (
       <div class="rounded-xl border border-gray-200 dark:border-slate-700 p-3 bg-white/80 dark:bg-slate-900/40">
         <script
+          is:inline
           src="https://giscus.app/client.js"
           data-repo={GISCUS_REPO}
           data-repo-id={GISCUS_REPO_ID}
