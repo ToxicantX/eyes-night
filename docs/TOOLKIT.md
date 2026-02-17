@@ -10,6 +10,7 @@
 ## 工具索引
 
 ### 1) 新建文章模板
+
 - 脚本：`scripts/new-post.sh`
 - 用途：按规范创建一篇新文章（含 frontmatter 与章节骨架）
 - 用法：
@@ -26,6 +27,7 @@
   - 自动输出下一步操作建议
 
 ### 2) 构建检查
+
 - 脚本：`scripts/build-check.sh`
 - 用途：执行依赖安装、`astro check`、`npm run build`
 - 用法：
@@ -34,6 +36,7 @@
   ```
 
 ### 3) 链接检查（占位）
+
 - 脚本：`scripts/link-check.sh`
 - 用途：预留链接巡检入口（未来可接入 lychee）
 - 用法：
@@ -42,6 +45,7 @@
   ```
 
 ### 4) 发布检查清单
+
 - 脚本：`scripts/release-checklist.sh`
 - 用途：发布前快速自检，避免漏项
 - 用法：
@@ -50,6 +54,7 @@
   ```
 
 ### 5) 导入 AI 点子日报（7天保留）
+
 - 脚本：`scripts/import-ai-ideas.sh`
 - 用途：把 `../ai-ideas-bot/reports` 的最新日报导入博客文章，并自动清理超过 7 天的自动导入文章
 - 用法：

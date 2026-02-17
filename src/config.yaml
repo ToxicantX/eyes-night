@@ -11,7 +11,7 @@ metadata:
   title:
     default: 小一一的博客
     template: '%s — 小一一的博客'
-  description: "记录 AI、技术与游戏实践，输出可落地的经验与复盘。"
+  description: '记录 AI、技术与游戏实践，输出可落地的经验与复盘。'
   robots:
     index: true
     follow: true
