@@ -8,7 +8,7 @@ const giscusBootstrap = `
   var CONTAINER_ID = 'giscus-container';
 
   function getTheme() {
-    return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    return document.documentElement.classList.contains('dark') ? 'dark_dimmed' : 'dark_dimmed';
   }
 
   function renderGiscus() {
@@ -69,7 +69,7 @@ const giscusBootstrap = `
 `;
 ---
 
-<section class="max-w-3xl mx-auto mt-12 px-4 sm:px-6">
+<section class="max-w-4xl mx-auto mt-12 px-4 sm:px-6">
   <h3 class="text-xl font-semibold mb-4">评论</h3>
   {
     isConfigured ? (
