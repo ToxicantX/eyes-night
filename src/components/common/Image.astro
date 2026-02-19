@@ -41,12 +41,21 @@ const _image = await findImage(props.src);
 
 let image: ImageType | undefined = undefined;
 
-if (
-  typeof _image === 'string' &&
-  (_image.startsWith('http://') || _image.startsWith('https://')) &&
-  isUnpicCompatible(_image)
-) {
-  image = await getImagesOptimized(_image, props, unpicOptimizer);
+if (typeof _image === 'string' && (_image.startsWith('http://') || _image.startsWith('https://'))) {
+  // 避免构建期去远程探测图片尺寸（CI 网络不稳定会导致构建失败）
+  image = {
+    src: _image,
+    attributes: {
+      alt: props.alt,
+      loading: props.loading,
+      decoding: props.decoding,
+      ...(props.width ? { width: props.width } : {}),
+      ...(props.height ? { height: props.height } : {}),
+      ...(props.class ? { class: props.class } : {}),
+      ...(props.sizes ? { sizes: props.sizes } : {}),
+      ...(props.srcset ? { srcset: props.srcset } : {}),
+    },
+  };
 } else if (_image) {
   image = await getImagesOptimized(_image, props, astroAssetsOptimizer);
 }
