@@ -6,6 +6,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import { getBlogPermalink } from '~/utils/permalinks';
 
 export const prerender = true;
 
@@ -30,7 +31,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-4 md:px-6 py-10 sm:py-14 lg:py-16 mx-auto max-w-4xl">
-    <a class="text-sm text-muted hover:text-primary" href="/eyes-night/blog/">← 返回文章列表</a>
+    <a class="text-sm text-muted hover:text-primary" href={getBlogPermalink()}>← 返回文章列表</a>
     <Headline>Tag: {tag.title}</Headline>
     {
       page.data?.length ? (

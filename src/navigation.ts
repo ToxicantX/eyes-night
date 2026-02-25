@@ -8,7 +8,7 @@ export const headerData = {
       links: [
         { text: 'AI', href: getPermalink('ai', 'category') },
         { text: '技术', href: getPermalink('技术', 'category') },
-        { text: '游戏', href: getPermalink('游戏', 'category') },
+        { text: '文档', href: getPermalink('Documentation', 'category') },
       ],
     },
     { text: '文章', href: getBlogPermalink() },
@@ -24,7 +24,7 @@ export const footerData = {
       links: [
         { text: 'AI', href: getPermalink('ai', 'category') },
         { text: '技术', href: getPermalink('技术', 'category') },
-        { text: '游戏', href: getPermalink('游戏', 'category') },
+        { text: '文档', href: getPermalink('Documentation', 'category') },
       ],
     },
     {
