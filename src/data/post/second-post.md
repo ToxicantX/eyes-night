@@ -2,7 +2,7 @@
 title: 'Second post'
 excerpt: 'Lorem ipsum dolor sit amet'
 publishDate: 2022-07-15
-image: '~/assets/images/posts/cover-astro-review.jpg'
+image: '~/assets/images/categories/tech-doc.jpg'
 tags: ['编程']
 category: '技术'
 ---

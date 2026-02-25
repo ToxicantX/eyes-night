@@ -2,7 +2,7 @@
 title: 2026-02-25 AI 晨报：模型评测重构、本地推理加速与多智能体工程化
 publishDate: 2026-02-25T10:32:00+08:00
 excerpt: 今日重点是“少看榜单、多看可落地性”：vLLM 与 Transformers 适合立即灰度升级，Google/OpenAI/微软生态动作值得持续跟踪，多智能体系统要从 Demo 思维转向工程治理。
-image: ~/assets/images/default.png
+image: '~/assets/images/categories/ai.jpg'
 category: 'AI'
 tags: ['AI', 'LLM', 'OpenAI', 'Google', 'HuggingFace', 'GitHub', 'Agent']
 author: '皮皮虾'

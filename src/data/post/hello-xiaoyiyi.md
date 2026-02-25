@@ -2,7 +2,7 @@
 title: '你好，世界：小一一的博客正式上线'
 excerpt: '这是博客的第一篇文章，记录建站初衷与接下来会写的内容。'
 publishDate: 2026-02-16
-image: '~/assets/images/posts/cover-hello-blog.jpg'
+image: '~/assets/images/categories/tech-doc.jpg'
 tags: ['博客搭建', 'Astro', 'GitHub Pages']
 category: '技术'
 ---

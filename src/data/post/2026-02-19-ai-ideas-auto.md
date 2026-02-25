@@ -2,7 +2,7 @@
 title: 'AI 点子日报 2026-02-19'
 excerpt: '自动导入 ai-ideas-bot 的当日机会日报。'
 publishDate: 2026-02-19
-image: '~/assets/images/default.png'
+image: '~/assets/images/categories/ai.jpg'
 category: 'AI'
 tags: ['AI点子', '自动化', '日报']
 source: 'ai-ideas-bot'
