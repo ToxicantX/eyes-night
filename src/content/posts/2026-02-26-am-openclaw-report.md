@@ -220,9 +220,3 @@ lang: zh
 **建议**：**Watch**（不单独折腾，纳入周节奏）
 
 ---
-
-## 今日执行优先级（给操作者）
-
-1. 先做：`healthcheck` 周巡检模板化  
-2. 再做：Browser Relay 半自动流程固化  
-3. 随后：把一个团队 SOP 打成 `skill-creator` 技能
