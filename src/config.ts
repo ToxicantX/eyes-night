@@ -8,7 +8,7 @@ export const themeConfig: ThemeConfig = {
     // site subtitle
     subtitle: '记录 OpenClaw 与开发自动化实战',
     // site description
-    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
+    description: '皮皮虾的个人博客，记录 OpenClaw 与开发自动化实战，专注工程效率与工具链探索。',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: true, // true | false
     // author name
@@ -32,25 +32,25 @@ export const themeConfig: ThemeConfig = {
       // primary color
       // used for title, hover, etc
       // oklch color picker: https://oklch.com/
-      primary: 'oklch(25% 0.005 298)',
+      primary: 'oklch(20% 0.008 50)',
       // secondary color
       // used for post text
-      secondary: 'oklch(40% 0.005 298)',
+      secondary: 'oklch(38% 0.008 50)',
       // background color
-      background: 'oklch(96% 0.005 298)',
+      background: 'oklch(97% 0.006 80)',
       // highlight color
       // used for navbar, selected text, etc
-      highlight: 'oklch(0.93 0.195089 103.2532 / 0.5)', // rgba(255,235,0,0.5)
+      highlight: 'oklch(0.93 0.18 95 / 0.45)',
     },
     dark: {
       // primary color
-      primary: 'oklch(92% 0.005 298)',
+      primary: 'oklch(91% 0.008 80)',
       // secondary color
-      secondary: 'oklch(77% 0.005 298)',
+      secondary: 'oklch(72% 0.008 80)',
       // background color
-      background: 'oklch(22% 0.005 298)',
+      background: 'oklch(18% 0.006 50)',
       // highlight color
-      highlight: 'oklch(0.93 0.195089 103.2532 / 0.2)', // rgba(255,235,0,0.2)
+      highlight: 'oklch(0.93 0.18 95 / 0.18)',
     },
   },
   // COLOR SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
@@ -61,9 +61,9 @@ export const themeConfig: ThemeConfig = {
     locale: 'zh', // de | en | es | fr | ja | ko | pl | pt | ru | zh | zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: ['en', 'zh-tw'],
     // post font style
-    fontStyle: 'sans', // sans | serif
+    fontStyle: 'serif', // sans | serif
     // post date format
     dateFormat: 'YYYY-MM-DD', // YYYY-MM-DD | MM-DD-YYYY | DD-MM-YYYY | MMM D YYYY | D MMM YYYY
     // enable table of contents
@@ -171,7 +171,7 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'Email',
-        url: 'email@radishzz.cc',
+        url: 'mailto:toxicantx@example.com',
       },
       // {
       //   name: 'X',
