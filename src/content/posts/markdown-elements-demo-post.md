@@ -3,10 +3,7 @@ title: "Markdown elements demo post"
 published: 2023-01-02
 description: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor."
 tags:
-  - "markdown"
-  - "blog"
-  - "Astro"
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

@@ -3,9 +3,7 @@ title: "Get started with AstroWind to create a website using Astro and Tailwind 
 published: 2023-08-12
 description: "Start your web journey with AstroWind – harness Astro and Tailwind CSS for a stunning site. Explore our guide now."
 tags:
-  - "astro"
-  - "tailwind css"
-  - "Tutorials"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

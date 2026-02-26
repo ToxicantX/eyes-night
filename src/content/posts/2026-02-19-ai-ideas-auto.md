@@ -3,7 +3,7 @@ title: "AI 点子日报 2026-02-19"
 published: 2026-02-19
 description: "自动导入 ai-ideas-bot 的当日机会日报。"
 tags:
-  - "AI"
+  - "OpenClaw"
 draft: false
 lang: zh
 ---

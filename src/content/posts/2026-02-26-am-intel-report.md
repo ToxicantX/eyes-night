@@ -3,11 +3,7 @@ title: "AI/技术情报早报 2026-02-26"
 published: 2026-02-26
 description: "今日 AI 与技术情报解读（早报），含评估与行动建议。"
 tags:
-  - "ai"
-  - "tech"
-  - "intel"
-  - "morning"
-  - "AI"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

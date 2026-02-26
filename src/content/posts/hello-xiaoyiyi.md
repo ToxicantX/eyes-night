@@ -3,7 +3,7 @@ title: "你好，世界：小一一的博客正式上线"
 published: 2026-02-16
 description: "这是博客的第一篇文章，记录建站初衷与接下来会写的内容。"
 tags:
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

@@ -3,7 +3,7 @@ title: "AI 点子日报 2026-02-17"
 published: 2026-02-17
 description: "自动导入 ai-ideas-bot 的当日机会日报。"
 tags:
-  - "AI"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

@@ -3,7 +3,7 @@ title: "Markdown Style Guide"
 published: 2024-06-19
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
 tags:
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

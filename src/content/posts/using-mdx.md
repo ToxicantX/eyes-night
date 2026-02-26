@@ -3,7 +3,7 @@ title: "Using MDX"
 published: 2024-06-01
 description: "Lorem ipsum dolor sit amet"
 tags:
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

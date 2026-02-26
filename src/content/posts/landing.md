@@ -3,10 +3,7 @@ title: "Mastering Landing Pages: Practical Guide for 2023"
 published: 2023-07-15
 description: "Ever clicked on an ad and found yourself on a page that seemed to really want you to do something? Congratulations, you've landed on a Landing Page!"
 tags:
-  - "landing-pages"
-  - "front-end"
-  - "resources"
-  - "技术"
+  - "游戏分享"
 draft: false
 lang: zh
 ---

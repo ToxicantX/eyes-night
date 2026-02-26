@@ -3,11 +3,7 @@ title: "OpenClaw 实战早报 2026-02-26"
 published: 2026-02-26
 description: "OpenClaw 使用案例与自动化实践早报，含可复用步骤与风险提示。"
 tags:
-  - "openclaw"
-  - "automation"
-  - "case-study"
-  - "morning"
-  - "技术"
+  - "OpenClaw"
 draft: false
 lang: zh
 ---

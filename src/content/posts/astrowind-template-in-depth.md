@@ -3,10 +3,7 @@ title: "AstroWind template in depth"
 published: 2023-07-17
 description: "While easy to get started, Astrowind is quite complex internally.  This page provides documentation on some of the more intricate parts."
 tags:
-  - "astro"
-  - "tailwind css"
-  - "front-end"
-  - "Documentation"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

@@ -3,10 +3,7 @@ title: "How to customize AstroWind template to suit your branding"
 published: 2023-08-06
 description: "Personalize AstroWind template for your brand. Our guide unlocks seamless customization steps for a unique online presence."
 tags:
-  - "astro"
-  - "tailwind css"
-  - "theme"
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

@@ -3,10 +3,7 @@ title: "Useful tools and resources to create a professional website"
 published: 2023-08-09
 description: "Explore vital tools and resources for a sleek website. From design to functionality, our guide elevates your online presence."
 tags:
-  - "front-end"
-  - "tools"
-  - "resources"
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---

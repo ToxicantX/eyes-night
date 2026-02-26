@@ -3,7 +3,7 @@ title: "First post"
 published: 2022-07-08
 description: "Lorem ipsum dolor sit amet"
 tags:
-  - "技术"
+  - "开发笔记"
 draft: false
 lang: zh
 ---
