@@ -1,92 +1,89 @@
-# 皮皮虾的博客（eyes-night）
+# Retypeset
 
-一个部署在 **GitHub Pages** 的个人博客，基于 Astro + Tailwind，主要记录：
+![Cover Image](assets/images/v1/retypeset-en-desktop.webp)
+![Cover Image](assets/images/v1/retypeset-en-mobile.webp)
 
-- AI 实践与自动化
-- 技术开发与部署复盘
-- 游戏体验与工具笔记
+[简体中文](assets/docs/README.zh.md)｜[繁体中文](assets/docs/README.zh-tw.md)｜[日本語](assets/docs/README.ja.md)｜[Español](assets/docs/README.es.md)｜[Français](assets/docs/README.fr.md)｜[Русский](assets/docs/README.ru.md)
 
-## 在线地址
+Retypeset is a static blog theme based on the [Astro](https://astro.build/) framework. Inspired by [Typography](https://astro-theme-typography.vercel.app/), Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.
 
-- 站点首页：<https://toxicantx.github.io/eyes-night/>
-- 仓库地址：<https://github.com/ToxicantX/eyes-night>
+## Demo
 
-## 技术栈
+- [Retypeset](https://retypeset.radishzz.cc/en/)
+- [Retipografía](https://retypeset.radishzz.cc/es/)
+- [Переверстка](https://retypeset.radishzz.cc/ru/)
+- [重新编排](https://retypeset.radishzz.cc/)
+- [重新編排](https://retypeset.radishzz.cc/zh-tw/)
+- [再組版](https://retypeset.radishzz.cc/ja/)
 
-- Astro 5
-- Tailwind CSS
-- Markdown / MDX
-- GitHub Actions（构建 + 部署）
+## Features
 
-## 本地开发
+- Built with Astro and UnoCSS
+- Support for SEO, Sitemap, OpenGraph, RSS, MDX, LaTeX, Mermaid, and TOC
+- i18n support
+- Light / Dark mode
+- Elegant view transitions
+- Rich theme customization
+- Optimized typography
+- Responsive design
+- Comment system
 
-```bash
-# 安装依赖
-npm ci
+## Performance
 
-# 启动开发服务
-npm run dev
-```
+<br>
+<p align="center">
+  <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fretypeset.radishzz.cc%2Fen%2F&form_factor=desktop">
+    <img width="710" alt="Retypeset Lighthouse Score" src="assets/images/retypeset-lighthouse-score.svg">
+  <a>
+</p>
 
-默认访问：
+## Getting Started
 
-- <http://127.0.0.1:4321/eyes-night/>
+1. [Fork](https://github.com/radishzzz/astro-theme-retypeset/fork) this repository, or use this template to create a new repository.
+2. Run the following commands in your terminal:
 
-## 常用命令
+   ```bash
+   # Clone the repository
+   git clone <repository-url>
 
-```bash
-# 构建
-npm run build
+   # Navigate to the project directory
+   cd <repository-name>
 
-# 本地预览构建产物
-npm run preview
+   # Install pnpm globally (if not already installed)
+   npm install -g pnpm
 
-# 代码检查（Astro + ESLint + Prettier）
-npm run check
+   # Install dependencies
+   pnpm install
 
-# 自动修复（ESLint + Prettier）
-npm run fix
+   # Start the development server
+   pnpm dev
+   ```
 
-# 新建文章脚本
-npm run new-post
-```
+3. Refer to the [Theme Guide](https://retypeset.radishzz.cc/en/posts/theme-guide/) to customize your blog and create new posts.
+4. Refer to the [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) to deploy your blog to Netlify, Vercel, or other platforms.
 
-## 目录结构（核心）
+&emsp;[![Deploy to Netlify](assets/images/deploy-netlify.svg)](https://app.netlify.com/start) [![Deploy to Vercel](assets/images/deploy-vercel.svg)](https://vercel.com/new)
 
-```text
-src/
-  data/post/           # 博客文章（.md / .mdx）
-  pages/               # 页面与路由
-  components/          # 组件
-  config.yaml          # 站点配置（标题、域名、base、SEO 等）
-.github/workflows/
-  actions.yaml         # CI 检查（build/check）
-  deploy.yml           # 部署到 GitHub Pages
-```
+## Updates
 
-## 内容发布流程
+Retypeset releases [new features](https://github.com/radishzzz/astro-theme-retypeset/issues/18) from time to time. Simply run `pnpm update-theme` to update the theme. If you encounter merge conflicts, please refer to [this video](https://youtu.be/lz5OuKzvadQ?si=sH_ALNgqxrYqNVQT) for manual resolution.
 
-1. 在 `src/data/post/` 新增或修改文章
-2. 本地检查：`npm run check`
-3. 提交并推送到 `main`
-4. GitHub Actions 自动构建并部署到 Pages
+## Credits
 
-## GitHub Pages 关键配置
+- [Typography](https://github.com/moeyua/astro-theme-typography)
+- [Fuwari](https://github.com/saicaca/fuwari)
+- [Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)
+- [AstroPaper](https://github.com/satnaing/astro-paper)
+- [heti](https://github.com/sivan/heti)
+- [EarlySummerSerif](https://github.com/GuiWonder/EarlySummerSerif)
 
-本项目为仓库子路径部署，已设置：
+## Star History
 
-- `src/config.yaml`
-  - `site: https://toxicantx.github.io`
-  - `base: /eyes-night/`
-  - `trailingSlash: true`
-
-如果仓库名或域名变更，请同步修改上述配置。
-
-## 已知约定
-
-- 分类与标签链接统一通过 `getPermalink(...)` 生成，避免硬编码路径。
-- 分页链接直接使用 Astro `page.url.prev/next`，避免重复拼接 base。
-
-## License
-
-MIT（继承上游模板许可）。
+<p align="center">
+<a href="https://star-history.com/#radishzzz/astro-theme-retypeset&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date" />
+  </picture>
+</p>
